@@ -81,13 +81,13 @@ Drop in these MKMapViewDelegate methods:
 ```
 extension ViewController: MKMapViewDelegate {
 
-    func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool){
+    func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
         NSOperationQueue().addOperationWithBlock({
             let mapBoundsWidth = Double(self.mapView.bounds.size.width)
-            let mapRectWidth:Double = self.mapView.visibleMapRect.size.width
-            let scale:Double = mapBoundsWidth / mapRectWidth
-            let annotationArray = self.clusteringManager.clusteredAnnotationsWithinMapRect(self.mapView.visibleMapRect, withZoomScale:scale)
-            self.clusteringManager.displayAnnotations(annotationArray, onMapView:self.mapView)
+            let mapRectWidth: Double = self.mapView.visibleMapRect.size.width
+            let scale: Double = mapBoundsWidth / mapRectWidth
+            let annotationArray = self.clusteringManager.clusteredAnnotationsWithinMapRect(self.mapView.visibleMapRect, withZoomScale: scale)
+            self.clusteringManager.displayAnnotations(annotationArray, onMapView: self.mapView)
         })
     }
     

@@ -36,8 +36,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7F27E8C19C5A405B5072D1D0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		8BFE2416CCF84B3F2AFDD15B /* FBAnnotationClusteringSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FBAnnotationClusteringSwift.podspec; path = ../FBAnnotationClusteringSwift.podspec; sourceTree = "<group>"; };
-		9FA0BD969C7743DC2F85985B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8BFE2416CCF84B3F2AFDD15B /* FBAnnotationClusteringSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; lineEnding = 0; name = FBAnnotationClusteringSwift.podspec; path = ../FBAnnotationClusteringSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
+		9FA0BD969C7743DC2F85985B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; lineEnding = 0; name = README.md; path = ../README.md; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.markdown; };
 		AFEA94E1B11BCAA1C17F7BAB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54E787713C1A6ABF1541261 /* Pods_FBAnnotationClusteringSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FBAnnotationClusteringSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0897C1FEBEFEF8FD6F4861 /* Pods-FBAnnotationClusteringSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBAnnotationClusteringSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBAnnotationClusteringSwift_Tests/Pods-FBAnnotationClusteringSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		EC2EB781B1BA8D7AC3F5FB11 /* Pods_FBAnnotationClusteringSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FBAnnotationClusteringSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE07C7E81C6E42EE00B219A5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE1225901C6E312200A5E91D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE1225911C6E312200A5E91D /* FBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBViewController.swift; sourceTree = "<group>"; };
+		FE1225911C6E312200A5E91D /* FBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FBViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FE1225971C6E313400A5E91D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FE1225991C6E313400A5E91D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */

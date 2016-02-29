@@ -24,9 +24,9 @@ class FBViewController: UIViewController {
         let array:[MKAnnotation] = randomLocationsWithCount(numberOfLocations)
         
         clusteringManager.addAnnotations(array)
-        clusteringManager.delegate = self;
+        clusteringManager.delegate = self
 
-        mapView.centerCoordinate = CLLocationCoordinate2DMake(0, 0);
+        mapView.centerCoordinate = CLLocationCoordinate2DMake(0, 0)
         
         
     }
@@ -38,42 +38,42 @@ class FBViewController: UIViewController {
 
     // MARK: - Utility
     
-    func randomLocationsWithCount(count:Int) -> [FBAnnotation] {
+    func randomLocationsWithCount(count: Int) -> [FBAnnotation] {
         var array:[FBAnnotation] = []
         for _ in 0...count {
-            let a:FBAnnotation = FBAnnotation()
-            a.coordinate = CLLocationCoordinate2D(latitude: drand48() * 40 - 20, longitude: drand48() * 80 - 40 )
-            array.append(a)
+            let annotation = FBAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: drand48() * 40 - 20, longitude: drand48() * 80 - 40 )
+            array.append(annotation)
         }
         return array
     }
 
 }
 
-extension FBViewController : FBClusteringManagerDelegate {
+extension FBViewController: FBClusteringManagerDelegate {
  
-    func cellSizeFactorForCoordinator(coordinator:FBClusteringManager) -> CGFloat{
+    func cellSizeFactorForCoordinator(coordinator: FBClusteringManager) -> CGFloat{
         return 1.0
     }
     
 }
 
 
-extension FBViewController : MKMapViewDelegate {
+extension FBViewController: MKMapViewDelegate {
     
-    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool){
+    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         
         NSOperationQueue().addOperationWithBlock({
         
             let mapBoundsWidth = Double(self.mapView.bounds.size.width)
             
-            let mapRectWidth:Double = self.mapView.visibleMapRect.size.width
+            let mapRectWidth: Double = self.mapView.visibleMapRect.size.width
             
-            let scale:Double = mapBoundsWidth / mapRectWidth
+            let scale: Double = mapBoundsWidth / mapRectWidth
             
-            let annotationArray = self.clusteringManager.clusteredAnnotationsWithinMapRect(self.mapView.visibleMapRect, withZoomScale:scale)
+            let annotationArray = self.clusteringManager.clusteredAnnotationsWithinMapRect(self.mapView.visibleMapRect, withZoomScale: scale)
             
-            self.clusteringManager.displayAnnotations(annotationArray, onMapView:self.mapView)
+            self.clusteringManager.displayAnnotations(annotationArray, onMapView: self.mapView)
 
         })
 
@@ -87,7 +87,7 @@ extension FBViewController : MKMapViewDelegate {
             
             reuseId = "Cluster"
             var clusterView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
-            clusterView = FBAnnotationClusterView(annotation: annotation, reuseIdentifier: reuseId, options: nil)
+            clusterView = FBAnnotationClusterView(annotation: annotation, reuseIdentifier: reuseId)
 
             return clusterView
             

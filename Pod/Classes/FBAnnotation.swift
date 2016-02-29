@@ -10,13 +10,14 @@ import Foundation
 import CoreLocation
 import MapKit
 
-public class FBAnnotation : NSObject {
+public class FBAnnotation: NSObject, MKAnnotation {
+    public var coordinate = CLLocationCoordinate2D()
+    public var title: String?
     
-    public var coordinate = CLLocationCoordinate2D(latitude: 39.208407, longitude: -76.799555)
-    public var title: String? = ""
-    
-}
-
-extension FBAnnotation : MKAnnotation {
-    
+    convenience init(title: String? = nil, coordinate: CLLocationCoordinate2D) {
+        self.init()
+        
+        self.title = title
+        self.coordinate = coordinate
+    }
 }
